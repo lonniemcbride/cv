@@ -6,7 +6,7 @@
     <title>Lonnie Mac McBride II - CV</title>
     <style>
         @page {
-            size: 8.5in 11in;
+            size: letter;
             margin: 0;
         }
 
@@ -16,55 +16,53 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
             font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
             color: #e8e8e8;
             background: #0d1117;
-            line-height: 1.4;
+            line-height: 1.35;
             width: 8.5in;
-            height: 11in;
+            min-height: 11in;
+            max-height: 11in;
             margin: 0 auto;
             padding: 0;
-            overflow: hidden;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         /* Top banner */
         .header-banner {
             background: linear-gradient(135deg, #0f1923 0%, #1a2940 50%, #0f1923 100%);
             border-bottom: 2px solid #3a7bd5;
-            padding: 20px 36px;
+            padding: 18px 32px;
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 20px;
         }
 
         .profile-photo {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             object-fit: cover;
             object-position: center top;
             border: 2px solid #3a7bd5;
-            box-shadow: 0 0 12px rgba(58, 123, 213, 0.3);
             flex-shrink: 0;
-            image-rendering: auto;
         }
 
         .initials-circle {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             border: 2px solid #3a7bd5;
-            box-shadow: 0 0 12px rgba(58, 123, 213, 0.3);
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             color: #3a7bd5;
             background: #1a2940;
-            letter-spacing: 2px;
         }
 
         .header-text {
@@ -72,27 +70,26 @@
         }
 
         h1 {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             color: #ffffff;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .title-tagline {
-            font-size: 11px;
+            font-size: 9.5px;
             color: #3a7bd5;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
+            letter-spacing: 2px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .contact-info {
-            font-size: 10.5px;
+            font-size: 9.5px;
             color: #94a3b8;
-            line-height: 1.6;
         }
 
         .contact-info a {
@@ -101,86 +98,82 @@
         }
 
         .contact-info span.sep {
-            margin: 0 6px;
+            margin: 0 5px;
             color: #475569;
         }
 
         /* Main content */
         .content {
-            padding: 16px 36px 20px;
+            padding: 14px 32px 16px;
         }
 
         section {
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
 
         h2 {
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 700;
             color: #3a7bd5;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
+            letter-spacing: 2px;
             border-bottom: 1px solid #1e3a5f;
-            padding-bottom: 4px;
-            margin-bottom: 8px;
+            padding-bottom: 3px;
+            margin-bottom: 6px;
         }
 
         .summary {
-            font-size: 10.5px;
+            font-size: 9.5px;
             color: #b8c5d6;
-            line-height: 1.5;
+            line-height: 1.45;
             border-left: 2px solid #3a7bd5;
-            padding-left: 12px;
+            padding-left: 10px;
         }
 
         .job {
-            margin-bottom: 10px;
-            padding-left: 10px;
+            margin-bottom: 8px;
+            padding-left: 8px;
             border-left: 2px solid #1e3a5f;
-        }
-
-        .job:hover {
-            border-left-color: #3a7bd5;
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 1px;
+            margin-bottom: 0;
         }
 
         .job-title {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             color: #ffffff;
         }
 
         .job-dates {
-            font-size: 9px;
+            font-size: 8.5px;
             color: #6b7b8f;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             white-space: nowrap;
         }
 
         .job-company {
-            font-size: 10.5px;
+            font-size: 9.5px;
             color: #6ba3e8;
             font-weight: 600;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .job ul {
-            margin-left: 10px;
-            font-size: 9.5px;
+            margin-left: 8px;
+            font-size: 8.5px;
             color: #94a3b8;
             list-style: none;
         }
 
         .job ul li {
-            margin-bottom: 1px;
-            padding-left: 10px;
+            margin-bottom: 0;
+            padding-left: 9px;
             position: relative;
             line-height: 1.4;
         }
@@ -190,20 +183,21 @@
             position: absolute;
             left: 0;
             color: #3a7bd5;
-            font-size: 6px;
+            font-size: 5px;
             top: 3px;
         }
 
-        /* Two-column layout for bottom sections */
-        .two-col {
+        /* Three-column bottom */
+        .three-col {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin-top: 10px;
         }
 
         .education-item {
-            margin-bottom: 4px;
-            font-size: 10px;
+            margin-bottom: 3px;
+            font-size: 9px;
             color: #b8c5d6;
         }
 
@@ -213,36 +207,35 @@
         }
 
         .education-item .institution {
-            font-size: 9px;
+            font-size: 8px;
             color: #6b7b8f;
         }
 
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 5px;
+            gap: 4px;
         }
 
         .skill-tag {
             background: #1a2940;
             border: 1px solid #2a4060;
             color: #94a3b8;
-            font-size: 9px;
-            padding: 2px 8px;
+            font-size: 8px;
+            padding: 1px 6px;
             border-radius: 2px;
             font-weight: 500;
-            letter-spacing: 0.3px;
         }
 
         .certs-list, .awards-list {
             list-style: none;
-            font-size: 10px;
+            font-size: 9px;
             color: #b8c5d6;
         }
 
         .certs-list li, .awards-list li {
-            margin-bottom: 3px;
-            padding-left: 12px;
+            margin-bottom: 2px;
+            padding-left: 10px;
             position: relative;
         }
 
@@ -251,31 +244,15 @@
             position: absolute;
             left: 0;
             color: #3a7bd5;
-            font-size: 7px;
-            top: 3px;
-        }
-
-        /* Subtle grid pattern background */
-        .content::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(58, 123, 213, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(58, 123, 213, 0.02) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
-            z-index: -1;
+            font-size: 6px;
+            top: 2px;
         }
 
         @media print {
-            body {
-                background: #0d1117;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+            html, body {
+                width: 8.5in;
+                height: 11in;
+                overflow: hidden;
             }
         }
     </style>
@@ -319,10 +296,10 @@
                 </div>
                 <div class="job-company">McBride Consulting &mdash; Arlington, VA</div>
                 <ul>
-                    <li>Evaluate and map AI/ML system architectures for enterprise clients, identifying integration points, capability gaps, and optimization opportunities</li>
-                    <li>Conduct technical assessments of large language models, automation platforms, and AI tooling to inform procurement and implementation decisions</li>
-                    <li>Develop AI adoption roadmaps and change management frameworks, aligning emerging technology capabilities with organizational objectives</li>
-                    <li>Advise leadership on responsible AI governance, data pipeline integrity, and model performance monitoring strategies</li>
+                    <li>Evaluate and map AI/ML system architectures for enterprise clients, identifying integration points and optimization opportunities</li>
+                    <li>Conduct technical assessments of large language models, automation platforms, and AI tooling to inform implementation decisions</li>
+                    <li>Develop AI adoption roadmaps and change management frameworks aligning technology capabilities with organizational objectives</li>
+                    <li>Advise leadership on responsible AI governance, data pipeline integrity, and model performance monitoring</li>
                 </ul>
             </div>
 
@@ -333,9 +310,9 @@
                 </div>
                 <div class="job-company">HIVE Digital Analytics</div>
                 <ul>
-                    <li>Established and directed a data analytics consultancy delivering market intelligence and systems-level insights to clients in technology, energy, and telecommunications</li>
-                    <li>Architected end-to-end data pipelines and analytics frameworks, enabling data-informed decisions at speed</li>
-                    <li>Managed multi-year engagements with cross-sector clients, scaling service delivery while maintaining analytical rigor</li>
+                    <li>Founded and directed a data analytics consultancy delivering market intelligence and systems-level insights across technology, energy, and telecom</li>
+                    <li>Architected end-to-end data pipelines and analytics frameworks enabling data-informed decisions at speed</li>
+                    <li>Managed multi-year cross-sector engagements, scaling delivery while maintaining analytical rigor</li>
                 </ul>
             </div>
 
@@ -358,7 +335,7 @@
                 </div>
                 <div class="job-company">PublicSq.</div>
                 <ul>
-                    <li>Designed and deployed data architecture and analytics infrastructure to support platform scaling</li>
+                    <li>Designed data architecture and analytics infrastructure to support platform scaling and engagement measurement</li>
                     <li>Built executive-level dashboards and KPI tracking systems to inform product strategy</li>
                 </ul>
             </div>
@@ -371,7 +348,7 @@
                 <div class="job-company">Berkshire Hathaway HomeServices</div>
                 <ul>
                     <li>Developed data-driven marketing strategies increasing lead generation in competitive residential markets</li>
-                    <li>Implemented CRM automation and marketing technology integrations, improving pipeline efficiency</li>
+                    <li>Implemented CRM automation and marketing technology integrations improving pipeline efficiency</li>
                 </ul>
             </div>
 
@@ -382,8 +359,8 @@
                 </div>
                 <div class="job-company">AT&T</div>
                 <ul>
-                    <li>Identified operational inefficiencies and delivered data-backed recommendations to optimize performance</li>
-                    <li>Produced competitive intelligence assessments that informed strategic pricing decisions</li>
+                    <li>Delivered data-backed recommendations to optimize regional performance metrics and operational efficiency</li>
+                    <li>Produced competitive intelligence assessments informing strategic pricing and service decisions</li>
                 </ul>
             </div>
 
@@ -395,7 +372,7 @@
                 <div class="job-company">Marco</div>
                 <ul>
                     <li>Defined market positioning and go-to-market strategy for an emerging technology platform</li>
-                    <li>Executed multi-channel acquisition campaigns, accelerating early traction and brand credibility</li>
+                    <li>Executed multi-channel acquisition campaigns accelerating early traction and brand credibility</li>
                 </ul>
             </div>
 
@@ -406,27 +383,27 @@
                 </div>
                 <div class="job-company">Tesla Energy</div>
                 <ul>
-                    <li>Advised on residential solar deployment strategies, contributing to regional growth targets</li>
+                    <li>Advised on residential solar deployment strategies contributing to regional growth targets</li>
                     <li>Developed financial models and energy consumption analyses to articulate ROI for prospective adopters</li>
                 </ul>
             </div>
 
         </section>
 
-        <div class="two-col">
+        <div class="three-col">
             <section>
                 <h2>Education</h2>
                 <div class="education-item">
                     <div class="degree">A.A., Philosophy</div>
-                    <div class="institution">Santa Barbara City College &mdash; 2020</div>
+                    <div class="institution">Santa Barbara City College, 2020</div>
                 </div>
                 <div class="education-item">
                     <div class="degree">A.A., Political Science</div>
-                    <div class="institution">Santa Barbara City College &mdash; 2020</div>
+                    <div class="institution">Santa Barbara City College, 2020</div>
                 </div>
                 <div class="education-item">
                     <div class="degree">A.A., Communications</div>
-                    <div class="institution">Santa Barbara City College &mdash; 2020</div>
+                    <div class="institution">Santa Barbara City College, 2020</div>
                 </div>
             </section>
 
@@ -436,29 +413,28 @@
                     <li>Snowflake &mdash; Data Warehouse</li>
                     <li>Snowflake &mdash; Data Architecture</li>
                 </ul>
-
-                <h2 style="margin-top: 12px;">Recognition</h2>
+                <h2 style="margin-top: 8px;">Recognition</h2>
                 <ul class="awards-list">
-                    <li>Santa Barbara Startup Week &mdash; Best Execution</li>
+                    <li>SB Startup Week &mdash; Best Execution</li>
                 </ul>
             </section>
-        </div>
 
-        <section>
-            <h2>Core Competencies</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">AI Systems Analysis</span>
-                <span class="skill-tag">Data Architecture</span>
-                <span class="skill-tag">Systems Implementation</span>
-                <span class="skill-tag">Competitive Intelligence</span>
-                <span class="skill-tag">Change Adoption</span>
-                <span class="skill-tag">Strategic Advisory</span>
-                <span class="skill-tag">Marketing Strategy</span>
-                <span class="skill-tag">Data Analysis</span>
-                <span class="skill-tag">Market Analysis</span>
-                <span class="skill-tag">Program Management</span>
-            </div>
-        </section>
+            <section>
+                <h2>Core Competencies</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">AI Systems Analysis</span>
+                    <span class="skill-tag">Data Architecture</span>
+                    <span class="skill-tag">Systems Implementation</span>
+                    <span class="skill-tag">Competitive Intelligence</span>
+                    <span class="skill-tag">Change Adoption</span>
+                    <span class="skill-tag">Strategic Advisory</span>
+                    <span class="skill-tag">Marketing Strategy</span>
+                    <span class="skill-tag">Data Analysis</span>
+                    <span class="skill-tag">Market Analysis</span>
+                    <span class="skill-tag">Program Management</span>
+                </div>
+            </section>
+        </div>
 
     </div>
 
