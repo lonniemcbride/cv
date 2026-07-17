@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lonnie Mac McBride II - CV</title>
     <style>
+        @page {
+            size: 8.5in 11in;
+            margin: 0;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,45 +20,47 @@
             font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
             color: #e8e8e8;
             background: #0d1117;
-            line-height: 1.6;
-            max-width: 8.5in;
+            line-height: 1.4;
+            width: 8.5in;
+            height: 11in;
             margin: 0 auto;
             padding: 0;
+            overflow: hidden;
         }
 
         /* Top banner */
         .header-banner {
             background: linear-gradient(135deg, #0f1923 0%, #1a2940 50%, #0f1923 100%);
-            border-bottom: 3px solid #3a7bd5;
-            padding: 40px 50px;
+            border-bottom: 2px solid #3a7bd5;
+            padding: 20px 36px;
             display: flex;
             align-items: center;
-            gap: 36px;
+            gap: 24px;
         }
 
         .profile-photo {
-            width: 180px;
-            height: 180px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
             object-position: center top;
-            border: 3px solid #3a7bd5;
-            box-shadow: 0 0 20px rgba(58, 123, 213, 0.3);
+            border: 2px solid #3a7bd5;
+            box-shadow: 0 0 12px rgba(58, 123, 213, 0.3);
             flex-shrink: 0;
             image-rendering: auto;
         }
 
         .initials-circle {
-            width: 180px;
-            height: 180px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            border: 3px solid #3a7bd5;
-            box-shadow: 0 0 20px rgba(58, 123, 213, 0.3);
+            border: 2px solid #3a7bd5;
+            box-shadow: 0 0 12px rgba(58, 123, 213, 0.3);
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 42px;
+            font-size: 32px;
             font-weight: 700;
             color: #3a7bd5;
             background: #1a2940;
@@ -65,27 +72,27 @@
         }
 
         h1 {
-            font-size: 30px;
+            font-size: 22px;
             font-weight: 700;
             color: #ffffff;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 3px;
         }
 
         .title-tagline {
-            font-size: 14px;
+            font-size: 11px;
             color: #3a7bd5;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2.5px;
             font-weight: 600;
-            margin-bottom: 14px;
+            margin-bottom: 8px;
         }
 
         .contact-info {
-            font-size: 12px;
+            font-size: 10.5px;
             color: #94a3b8;
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
         .contact-info a {
@@ -93,46 +100,42 @@
             text-decoration: none;
         }
 
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
         .contact-info span.sep {
-            margin: 0 10px;
+            margin: 0 6px;
             color: #475569;
         }
 
         /* Main content */
         .content {
-            padding: 36px 50px;
+            padding: 16px 36px 20px;
         }
 
         section {
-            margin-bottom: 30px;
+            margin-bottom: 14px;
         }
 
         h2 {
-            font-size: 13px;
+            font-size: 10px;
             font-weight: 700;
             color: #3a7bd5;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2.5px;
             border-bottom: 1px solid #1e3a5f;
-            padding-bottom: 8px;
-            margin-bottom: 16px;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
         }
 
         .summary {
-            font-size: 14px;
+            font-size: 10.5px;
             color: #b8c5d6;
-            line-height: 1.8;
-            border-left: 3px solid #3a7bd5;
-            padding-left: 16px;
+            line-height: 1.5;
+            border-left: 2px solid #3a7bd5;
+            padding-left: 12px;
         }
 
         .job {
-            margin-bottom: 22px;
-            padding-left: 14px;
+            margin-bottom: 10px;
+            padding-left: 10px;
             border-left: 2px solid #1e3a5f;
         }
 
@@ -144,17 +147,17 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .job-title {
-            font-size: 14px;
+            font-size: 11px;
             font-weight: 700;
             color: #ffffff;
         }
 
         .job-dates {
-            font-size: 11px;
+            font-size: 9px;
             color: #6b7b8f;
             font-weight: 600;
             letter-spacing: 0.5px;
@@ -162,23 +165,24 @@
         }
 
         .job-company {
-            font-size: 13px;
+            font-size: 10.5px;
             color: #6ba3e8;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 3px;
         }
 
         .job ul {
-            margin-left: 16px;
-            font-size: 13px;
+            margin-left: 10px;
+            font-size: 9.5px;
             color: #94a3b8;
             list-style: none;
         }
 
         .job ul li {
-            margin-bottom: 5px;
-            padding-left: 14px;
+            margin-bottom: 1px;
+            padding-left: 10px;
             position: relative;
+            line-height: 1.4;
         }
 
         .job ul li::before {
@@ -186,20 +190,20 @@
             position: absolute;
             left: 0;
             color: #3a7bd5;
-            font-size: 8px;
-            top: 4px;
+            font-size: 6px;
+            top: 3px;
         }
 
         /* Two-column layout for bottom sections */
         .two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 20px;
         }
 
         .education-item {
-            margin-bottom: 8px;
-            font-size: 13px;
+            margin-bottom: 4px;
+            font-size: 10px;
             color: #b8c5d6;
         }
 
@@ -209,36 +213,36 @@
         }
 
         .education-item .institution {
-            font-size: 12px;
+            font-size: 9px;
             color: #6b7b8f;
         }
 
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 5px;
         }
 
         .skill-tag {
             background: #1a2940;
             border: 1px solid #2a4060;
             color: #94a3b8;
-            font-size: 11px;
-            padding: 4px 12px;
-            border-radius: 3px;
+            font-size: 9px;
+            padding: 2px 8px;
+            border-radius: 2px;
             font-weight: 500;
             letter-spacing: 0.3px;
         }
 
         .certs-list, .awards-list {
             list-style: none;
-            font-size: 13px;
+            font-size: 10px;
             color: #b8c5d6;
         }
 
         .certs-list li, .awards-list li {
-            margin-bottom: 6px;
-            padding-left: 14px;
+            margin-bottom: 3px;
+            padding-left: 12px;
             position: relative;
         }
 
@@ -247,7 +251,7 @@
             position: absolute;
             left: 0;
             color: #3a7bd5;
-            font-size: 9px;
+            font-size: 7px;
             top: 3px;
         }
 
@@ -272,14 +276,6 @@
                 background: #0d1117;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
-            }
-
-            .header-banner {
-                padding: 30px 40px;
-            }
-
-            .content {
-                padding: 28px 40px;
             }
         }
     </style>
@@ -309,7 +305,7 @@
         <section>
             <h2>Executive Summary</h2>
             <p class="summary">
-                Results-driven analyst and consultant with over a decade of experience delivering data-driven intelligence, systems architecture, and strategic advisory services across technology, energy, and telecommunications sectors. Founder of a digital analytics firm serving enterprise clients. Specializes in AI systems analysis, data infrastructure modernization, and translating complex technical capabilities into measurable business outcomes. Proven ability to operate at the intersection of emerging technology and strategic decision-making.
+                Results-driven analyst and consultant with over a decade of experience delivering data-driven intelligence, systems architecture, and strategic advisory services across technology, energy, and telecommunications sectors. Founder of a digital analytics firm serving enterprise clients. Specializes in AI systems analysis, data infrastructure modernization, and translating complex technical capabilities into measurable business outcomes.
             </p>
         </section>
 
@@ -337,10 +333,9 @@
                 </div>
                 <div class="job-company">HIVE Digital Analytics</div>
                 <ul>
-                    <li>Established and directed a data analytics consultancy delivering market intelligence, competitive analysis, and systems-level insights to clients in technology, energy, and telecommunications sectors</li>
-                    <li>Architected end-to-end data pipelines and analytics frameworks, enabling stakeholders to make operationally sound, data-informed decisions at speed</li>
-                    <li>Managed multi-year engagements with cross-sector clients, scaling service delivery while maintaining analytical rigor and client confidence</li>
-                    <li>Led strategic analysis efforts supporting go-to-market execution, organizational scaling, and technology adoption across early-stage and growth-phase companies</li>
+                    <li>Established and directed a data analytics consultancy delivering market intelligence and systems-level insights to clients in technology, energy, and telecommunications</li>
+                    <li>Architected end-to-end data pipelines and analytics frameworks, enabling data-informed decisions at speed</li>
+                    <li>Managed multi-year engagements with cross-sector clients, scaling service delivery while maintaining analytical rigor</li>
                 </ul>
             </div>
 
@@ -351,9 +346,8 @@
                 </div>
                 <div class="job-company">GLH Investments</div>
                 <ul>
-                    <li>Provided strategic advisory on portfolio allocation and risk mitigation for a real estate investment fund managing multi-property holdings</li>
-                    <li>Conducted due diligence and market feasibility analyses to identify high-yield acquisition targets and inform investment committee decisions</li>
-                    <li>Designed operational reporting frameworks to enhance investor transparency and accelerate capital deployment timelines</li>
+                    <li>Provided strategic advisory on portfolio allocation and risk mitigation for a real estate investment fund</li>
+                    <li>Conducted due diligence and market feasibility analyses to identify high-yield acquisition targets</li>
                 </ul>
             </div>
 
@@ -364,9 +358,8 @@
                 </div>
                 <div class="job-company">PublicSq.</div>
                 <ul>
-                    <li>Designed and deployed data architecture and analytics infrastructure to support platform scaling and user engagement measurement</li>
-                    <li>Built executive-level dashboards and KPI tracking systems to inform product strategy and feature prioritization</li>
-                    <li>Conducted user behavioral analysis and market segmentation studies to guide growth strategy and acquisition campaigns</li>
+                    <li>Designed and deployed data architecture and analytics infrastructure to support platform scaling</li>
+                    <li>Built executive-level dashboards and KPI tracking systems to inform product strategy</li>
                 </ul>
             </div>
 
@@ -377,9 +370,8 @@
                 </div>
                 <div class="job-company">Berkshire Hathaway HomeServices</div>
                 <ul>
-                    <li>Developed data-driven marketing strategies that increased lead generation and market penetration in competitive residential markets</li>
-                    <li>Performed demographic and market trend analyses to refine brand positioning and outreach targeting</li>
-                    <li>Implemented CRM automation and marketing technology integrations, improving pipeline efficiency and conversion metrics</li>
+                    <li>Developed data-driven marketing strategies increasing lead generation in competitive residential markets</li>
+                    <li>Implemented CRM automation and marketing technology integrations, improving pipeline efficiency</li>
                 </ul>
             </div>
 
@@ -390,9 +382,8 @@
                 </div>
                 <div class="job-company">AT&T</div>
                 <ul>
-                    <li>Identified operational inefficiencies and delivered data-backed recommendations to optimize regional performance metrics</li>
-                    <li>Supported enterprise change management initiatives, driving adoption of new systems and operational workflows across teams</li>
-                    <li>Produced competitive intelligence assessments that informed strategic pricing and service architecture decisions</li>
+                    <li>Identified operational inefficiencies and delivered data-backed recommendations to optimize performance</li>
+                    <li>Produced competitive intelligence assessments that informed strategic pricing decisions</li>
                 </ul>
             </div>
 
@@ -403,9 +394,8 @@
                 </div>
                 <div class="job-company">Marco</div>
                 <ul>
-                    <li>Defined market positioning and go-to-market strategy for an emerging technology platform entering a contested market space</li>
-                    <li>Executed multi-channel acquisition campaigns, accelerating early traction and establishing brand credibility</li>
-                    <li>Analyzed campaign performance metrics to optimize resource allocation and maximize return on marketing spend</li>
+                    <li>Defined market positioning and go-to-market strategy for an emerging technology platform</li>
+                    <li>Executed multi-channel acquisition campaigns, accelerating early traction and brand credibility</li>
                 </ul>
             </div>
 
@@ -416,9 +406,8 @@
                 </div>
                 <div class="job-company">Tesla Energy</div>
                 <ul>
-                    <li>Advised on residential solar deployment strategies, contributing to regional growth targets and customer acquisition objectives</li>
-                    <li>Developed financial models and energy consumption analyses to articulate ROI and lifecycle value for prospective adopters</li>
-                    <li>Collaborated with cross-functional engineering and sales teams to streamline proposal generation and improve close rates</li>
+                    <li>Advised on residential solar deployment strategies, contributing to regional growth targets</li>
+                    <li>Developed financial models and energy consumption analyses to articulate ROI for prospective adopters</li>
                 </ul>
             </div>
 
@@ -448,7 +437,7 @@
                     <li>Snowflake &mdash; Data Architecture</li>
                 </ul>
 
-                <h2 style="margin-top: 20px;">Recognition</h2>
+                <h2 style="margin-top: 12px;">Recognition</h2>
                 <ul class="awards-list">
                     <li>Santa Barbara Startup Week &mdash; Best Execution</li>
                 </ul>
