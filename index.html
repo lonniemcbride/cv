@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonnie Mac McBride II - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            color: #e8e8e8;
+            background: #0d1117;
+            line-height: 1.6;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* Top banner */
+        .header-banner {
+            background: linear-gradient(135deg, #0f1923 0%, #1a2940 50%, #0f1923 100%);
+            border-bottom: 3px solid #3a7bd5;
+            padding: 40px 50px;
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3a7bd5;
+            box-shadow: 0 0 20px rgba(58, 123, 213, 0.3);
+            flex-shrink: 0;
+        }
+
+        .initials-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #3a7bd5;
+            box-shadow: 0 0 20px rgba(58, 123, 213, 0.3);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            font-weight: 700;
+            color: #3a7bd5;
+            background: #1a2940;
+            letter-spacing: 2px;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .title-tagline {
+            font-size: 14px;
+            color: #3a7bd5;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .contact-info {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: #6ba3e8;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info span.sep {
+            margin: 0 10px;
+            color: #475569;
+        }
+
+        /* Main content */
+        .content {
+            padding: 36px 50px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #3a7bd5;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 1px solid #1e3a5f;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        .summary {
+            font-size: 14px;
+            color: #b8c5d6;
+            line-height: 1.8;
+            border-left: 3px solid #3a7bd5;
+            padding-left: 16px;
+        }
+
+        .job {
+            margin-bottom: 22px;
+            padding-left: 14px;
+            border-left: 2px solid #1e3a5f;
+        }
+
+        .job:hover {
+            border-left-color: #3a7bd5;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .job-dates {
+            font-size: 11px;
+            color: #6b7b8f;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .job-company {
+            font-size: 13px;
+            color: #6ba3e8;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .job ul {
+            margin-left: 16px;
+            font-size: 13px;
+            color: #94a3b8;
+            list-style: none;
+        }
+
+        .job ul li {
+            margin-bottom: 5px;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .job ul li::before {
+            content: "\25A0";
+            position: absolute;
+            left: 0;
+            color: #3a7bd5;
+            font-size: 8px;
+            top: 4px;
+        }
+
+        /* Two-column layout for bottom sections */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .education-item {
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #b8c5d6;
+        }
+
+        .education-item .degree {
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        .education-item .institution {
+            font-size: 12px;
+            color: #6b7b8f;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #1a2940;
+            border: 1px solid #2a4060;
+            color: #94a3b8;
+            font-size: 11px;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .certs-list, .awards-list {
+            list-style: none;
+            font-size: 13px;
+            color: #b8c5d6;
+        }
+
+        .certs-list li, .awards-list li {
+            margin-bottom: 6px;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .certs-list li::before, .awards-list li::before {
+            content: "\25C6";
+            position: absolute;
+            left: 0;
+            color: #3a7bd5;
+            font-size: 9px;
+            top: 3px;
+        }
+
+        /* Subtle grid pattern background */
+        .content::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(58, 123, 213, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(58, 123, 213, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @media print {
+            body {
+                background: #0d1117;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .header-banner {
+                padding: 30px 40px;
+            }
+
+            .content {
+                padding: 28px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <img src="profile.jpg" alt="Lonnie Mac McBride II" class="profile-photo" onerror="this.style.display='none'; document.getElementById('initials-fallback').style.display='flex';">
+        <div id="initials-fallback" class="initials-circle" style="display:none;">LM</div>
+        <div class="header-text">
+            <h1>Lonnie Mac McBride II</h1>
+            <div class="title-tagline">AI Systems Analyst &bull; Defense Technology Consultant</div>
+            <div class="contact-info">
+                <a href="mailto:mac.mcbride@mcbrideinternational.com">mac.mcbride@mcbrideinternational.com</a>
+                <span class="sep">|</span>
+                (619) 678-3860
+                <span class="sep">|</span>
+                Arlington, Virginia
+                <span class="sep">|</span>
+                <a href="https://www.linkedin.com/in/lonnie-mcbride-a01abb134/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <section>
+            <h2>Executive Summary</h2>
+            <p class="summary">
+                Mission-focused analyst and consultant with over a decade of experience delivering data-driven intelligence, systems architecture, and strategic advisory services across defense-adjacent, technology, energy, and telecommunications sectors. Founder of a digital analytics firm serving enterprise and government-facing clients. Specializes in AI systems analysis, data infrastructure modernization, and translating complex technical capabilities into operational advantage. Proven ability to operate at the intersection of emerging technology and strategic decision-making.
+            </p>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">AI Systems Analyst</span>
+                    <span class="job-dates">2026 &ndash; PRESENT</span>
+                </div>
+                <div class="job-company">McBride Consulting &mdash; Arlington, VA</div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Founder / Managing Director</span>
+                    <span class="job-dates">2016 &ndash; 2026</span>
+                </div>
+                <div class="job-company">HIVE Digital Analytics</div>
+                <ul>
+                    <li>Established and directed a data analytics consultancy delivering market intelligence, competitive analysis, and systems-level insights to clients in defense-adjacent technology, energy, and telecommunications sectors</li>
+                    <li>Architected end-to-end data pipelines and analytics frameworks, enabling stakeholders to make operationally sound, data-informed decisions at speed</li>
+                    <li>Managed multi-year engagements with cross-sector clients, scaling service delivery while maintaining analytical rigor and client confidence</li>
+                    <li>Led strategic analysis efforts supporting go-to-market execution, organizational scaling, and technology adoption across early-stage and growth-phase companies</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Business Consultant</span>
+                    <span class="job-dates">2024 &ndash; 2025</span>
+                </div>
+                <div class="job-company">GLH Investments</div>
+                <ul>
+                    <li>Provided strategic advisory on portfolio allocation and risk mitigation for a real estate investment fund managing multi-property holdings</li>
+                    <li>Conducted due diligence and market feasibility analyses to identify high-yield acquisition targets and inform investment committee decisions</li>
+                    <li>Designed operational reporting frameworks to enhance investor transparency and accelerate capital deployment timelines</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Data Consultant</span>
+                    <span class="job-dates">2021 &ndash; 2022</span>
+                </div>
+                <div class="job-company">PublicSq.</div>
+                <ul>
+                    <li>Designed and deployed data architecture and analytics infrastructure to support platform scaling and user engagement measurement</li>
+                    <li>Built executive-level dashboards and KPI tracking systems to inform product strategy and feature prioritization</li>
+                    <li>Conducted user behavioral analysis and market segmentation studies to guide growth strategy and acquisition campaigns</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Marketing Consultant</span>
+                    <span class="job-dates">2019 &ndash; 2020</span>
+                </div>
+                <div class="job-company">Berkshire Hathaway HomeServices</div>
+                <ul>
+                    <li>Developed data-driven marketing strategies that increased lead generation and market penetration in competitive residential markets</li>
+                    <li>Performed demographic and market trend analyses to refine brand positioning and outreach targeting</li>
+                    <li>Implemented CRM automation and marketing technology integrations, improving pipeline efficiency and conversion metrics</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Business Consultant</span>
+                    <span class="job-dates">2018 &ndash; 2019</span>
+                </div>
+                <div class="job-company">AT&T</div>
+                <ul>
+                    <li>Identified operational inefficiencies and delivered data-backed recommendations to optimize regional performance metrics</li>
+                    <li>Supported enterprise change management initiatives, driving adoption of new systems and operational workflows across teams</li>
+                    <li>Produced competitive intelligence assessments that informed strategic pricing and service architecture decisions</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Marketing Consultant</span>
+                    <span class="job-dates">2017 &ndash; 2018</span>
+                </div>
+                <div class="job-company">Marco</div>
+                <ul>
+                    <li>Defined market positioning and go-to-market strategy for an emerging technology platform entering a contested market space</li>
+                    <li>Executed multi-channel acquisition campaigns, accelerating early traction and establishing brand credibility</li>
+                    <li>Analyzed campaign performance metrics to optimize resource allocation and maximize return on marketing spend</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Energy Consultant</span>
+                    <span class="job-dates">2016 &ndash; 2017</span>
+                </div>
+                <div class="job-company">Tesla Energy</div>
+                <ul>
+                    <li>Advised on residential solar deployment strategies, contributing to regional growth targets and customer acquisition objectives</li>
+                    <li>Developed financial models and energy consumption analyses to articulate ROI and lifecycle value for prospective adopters</li>
+                    <li>Collaborated with cross-functional engineering and sales teams to streamline proposal generation and improve close rates</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <div class="two-col">
+            <section>
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="degree">A.A., Philosophy</div>
+                    <div class="institution">Santa Barbara City College &mdash; 2020</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">A.A., Political Science</div>
+                    <div class="institution">Santa Barbara City College &mdash; 2020</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">A.A., Communications</div>
+                    <div class="institution">Santa Barbara City College &mdash; 2020</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Certifications</h2>
+                <ul class="certs-list">
+                    <li>Snowflake &mdash; Data Warehouse</li>
+                    <li>Snowflake &mdash; Data Architecture</li>
+                </ul>
+
+                <h2 style="margin-top: 20px;">Recognition</h2>
+                <ul class="awards-list">
+                    <li>Santa Barbara Startup Week &mdash; Best Execution</li>
+                </ul>
+            </section>
+        </div>
+
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">AI Systems Analysis</span>
+                <span class="skill-tag">Data Architecture</span>
+                <span class="skill-tag">Systems Implementation</span>
+                <span class="skill-tag">Competitive Intelligence</span>
+                <span class="skill-tag">Change Adoption</span>
+                <span class="skill-tag">Strategic Advisory</span>
+                <span class="skill-tag">Marketing Strategy</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Market Analysis</span>
+                <span class="skill-tag">Program Management</span>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
